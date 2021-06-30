@@ -1,0 +1,16 @@
+body,
+html {
+	font-family: 'Verdana', sans-serif;
+}
+
+textarea {
+	font-family: 'Courier New', monospace;
+}
+
+.ml-2 {
+	margin-left: 0.5rem !important;
+}
+
+.mr-2 {
+	margin-right: 0.5rem !important;
+}
