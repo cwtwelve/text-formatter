@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button, FormGroup, FormControl, Row } from 'react-bootstrap';
 
 const JSONValidator = () => {
 	const [text, setText] = useState('');
 	const [validationMessage, setValidationMessage] = useState('');
 
-	const runValidation = () => {
-		console.log(text);
+	useEffect(() => {
+		setValidationMessage('');
+	}, [text]);
 
+	const runValidation = () => {
 		try {
 			JSON.parse(text);
 			setValidationMessage('Valid');
@@ -17,7 +19,7 @@ const JSONValidator = () => {
 	};
 
 	return (
-		<div className='m-2'>
+		<div className='mt-2'>
 			<Row>
 				<FormGroup>
 					<div className='d-flex mb-2 align-items-center justify-content-between'>

@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 
 const Header = () => {
 	return (
-		<div className='mx-2 mt-2'>
+		<React.Fragment>
 			<Link className='mr-2' to='/'>
 				<Button variant='outline-primary' type='button'>
 					Home
@@ -15,7 +15,7 @@ const Header = () => {
 					JSON Validator
 				</Button>
 			</Link>
-		</div>
+		</React.Fragment>
 	);
 };
 
