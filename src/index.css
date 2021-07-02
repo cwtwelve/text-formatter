@@ -1,14 +1,25 @@
 body,
 html {
 	font-family: 'Verdana', sans-serif;
+    background-color: #333333;
+    color: white;
 }
 
 textarea {
 	font-family: 'Courier New', monospace;
+    resize: none;
+}
+
+.ml-1 {
+	margin-left: 0.25rem !important;
 }
 
 .ml-2 {
 	margin-left: 0.5rem !important;
+}
+
+.mr-1 {
+	margin-right: 0.25rem !important;
 }
 
 .mr-2 {
