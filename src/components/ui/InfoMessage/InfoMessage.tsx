@@ -1,5 +1,5 @@
 import React from 'react';
-import { InfoMessageType } from '../../models';
+import { InfoMessageType } from '../../../models';
 import './infoMessage.css';
 
 interface UIMessageProps {

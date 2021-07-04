@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button, FormGroup, FormControl, Row } from 'react-bootstrap';
 import { validateJSON } from '../../../utils';
-import { InfoMessageType } from '../../models';
+import { InfoMessageType } from '../../../models';
 import { InfoMessage } from '../../ui';
 
 const JSONValidator = () => {
@@ -16,7 +16,7 @@ const JSONValidator = () => {
 		} else {
 			const handler = setTimeout(() => {
 				runValidation();
-			}, 1000);
+			}, 500);
 			return () => clearTimeout(handler);
 		}
 	}, [text]); // eslint-disable-line react-hooks/exhaustive-deps
