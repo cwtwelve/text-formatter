@@ -1,4 +1,4 @@
-import validateJSON from "./ValidateJSON";
-import removeWhitespace from "./RemoveWhitespace";
+import validateJSON from './validateJSON';
+import removeWhitespace from './removeWhitespace';
 
-export {validateJSON, removeWhitespace}
+export { validateJSON, removeWhitespace };

@@ -5,36 +5,36 @@ import Header from './Header';
 import Home from './views/Home';
 import JSONValidator from './views/JSONValidator/JSONValidator';
 import WhitespaceRemover from './views/WhitespaceRemover/WhitespaceRemover';
-import './App.css';
+import './app.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const App = () => {
 	return (
 		<Container>
 			<BrowserRouter>
-                <div className='vh-100'>
-                    <div className='mt-2 menu-container'>
-                        <Header />
-                    </div>
-                    <div className='main-content-container'>
-                        <div className='h-100 pt-2'>
-                            <Switch>
-                                <Route path='/' exact component={Home} />
-                                <Route
-                                    path='/JSONValidator'
-                                    exact
-                                    component={JSONValidator}
-                                />
-                                <Route
-                                    path='/WhitespaceRemover'
-                                    exact
-                                    component={WhitespaceRemover}
-                                />
-                            </Switch>
-                        </div>
-                    </div>
-                    <div className='ad-container'></div>
-                </div>
+				<div className='vh-100'>
+					<div className='mt-2 menu-container'>
+						<Header />
+					</div>
+					<div className='main-content-container'>
+						<div className='h-100 pt-4'>
+							<Switch>
+								<Route path='/' exact component={Home} />
+								<Route
+									path='/JSONValidator'
+									exact
+									component={JSONValidator}
+								/>
+								<Route
+									path='/WhitespaceRemover'
+									exact
+									component={WhitespaceRemover}
+								/>
+							</Switch>
+						</div>
+					</div>
+					<div className='ad-container'></div>
+				</div>
 			</BrowserRouter>
 		</Container>
 	);
