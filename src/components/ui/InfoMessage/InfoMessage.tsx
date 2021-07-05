@@ -5,11 +5,13 @@ import './infoMessage.scss';
 interface UIMessageProps {
 	text: string;
 	infoMessageType: InfoMessageType;
+	clickHandler?: () => void;
 }
 
 const UIMessage = ({
 	text,
 	infoMessageType = InfoMessageType.INFO,
+	clickHandler,
 }: UIMessageProps) => {
 	if (!text) {
 		return null;
@@ -17,15 +19,17 @@ const UIMessage = ({
 
 	return (
 		<div
+			key={Date.now()}
+			onClick={clickHandler}
 			className={`message-container ${
 				infoMessageType === InfoMessageType.INFO
-					? 'info-border-color'
+					? 'info-message-container'
 					: infoMessageType === InfoMessageType.SUCCESS
-					? 'success-border-color'
-					: 'error-border-color'
+					? 'success-message-container'
+					: 'failure-message-container'
 			}`}
 		>
-			<div className='message'>{text}</div>
+			<span>{text}</span>
 		</div>
 	);
 };

@@ -10,29 +10,27 @@ const JSONValidator = () => {
 	const [validationMessage, setValidationMessage] = useState<string>('');
 
 	useEffect(() => {
-		if (!text) {
-			setValidationMessage('');
-			setValidationSuccess(false);
-		} else {
+		clearValidation();
+		if (text) {
 			const handler = setTimeout(() => {
-				runValidation();
-			}, 500);
+				if (validateJSON(text)) {
+					setValidationMessage('Valid');
+					setValidationSuccess(true);
+				} else {
+					setValidationMessage('Not valid');
+					setValidationSuccess(false);
+				}
+			}, 1000);
 			return () => clearTimeout(handler);
 		}
-	}, [text]); // eslint-disable-line react-hooks/exhaustive-deps
-
-	const runValidation = () => {
-		if (validateJSON(text)) {
-			setValidationMessage('Valid');
-			setValidationSuccess(true);
-		} else {
-			setValidationMessage('Not Valid');
-			setValidationSuccess(false);
-		}
-	};
+	}, [text]);
 
 	const clearText = () => {
 		setText('');
+		clearValidation();
+	};
+
+	const clearValidation = () => {
 		setValidationMessage('');
 		setValidationSuccess(false);
 	};
@@ -50,14 +48,6 @@ const JSONValidator = () => {
 					<div className='d-flex mb-2 align-items-center justify-content-start'>
 						<Button
 							className='mr-2'
-							variant='outline-light'
-							type='submit'
-							onClick={runValidation}
-						>
-							Validate
-						</Button>
-						<Button
-							className='mr-2'
 							variant='outline-warning'
 							type='submit'
 							onClick={clearText}
@@ -72,6 +62,7 @@ const JSONValidator = () => {
 						</div>
 					</div>
 					<FormControl
+						placeholder={`{\n\t"Paste": "here"\n}`}
 						className='h-100'
 						as='textarea'
 						onChange={(e) => setText(e.target.value)}

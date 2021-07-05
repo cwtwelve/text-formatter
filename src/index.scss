@@ -1,3 +1,19 @@
+$white-color: #ffffff;
+$black-color: #000000;
+$blue-color: #0d6efd;
+$indigo-color: #6610f2;
+$purple-color: #6f42c1;
+$pink-color: #d63384;
+$red-color: #dc3545;
+$orange-color: #fd7e14;
+$yellow-color: #ffc107;
+$green-color: #198754;
+$teal-color: #20c997;
+$cyan-color: #0dcaf0;
+$white-color: #fff;
+$gray-color: #6c757d;
+$dark-gray-color: #343a40;
+
 body,
 html {
 	font-family: 'Verdana', sans-serif;
@@ -8,6 +24,9 @@ html {
 textarea {
 	font-family: 'Courier New', monospace;
 	resize: none;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
 }
 
 .ml-auto {
