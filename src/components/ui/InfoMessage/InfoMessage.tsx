@@ -1,6 +1,6 @@
 import React from 'react';
 import { InfoMessageType } from '../../../models';
-import './infoMessage.css';
+import './infoMessage.scss';
 
 interface UIMessageProps {
 	text: string;

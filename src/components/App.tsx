@@ -5,7 +5,7 @@ import Header from './Header';
 import Home from './views/Home';
 import JSONValidator from './views/JSONValidator/JSONValidator';
 import WhitespaceRemover from './views/WhitespaceRemover/WhitespaceRemover';
-import './app.css';
+import './app.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const App = () => {
