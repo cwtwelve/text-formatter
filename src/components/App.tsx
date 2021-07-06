@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import Header from './Header';
-import Home from './views/Home';
+import Home from './views/Home/Home';
 import JSONValidator from './views/JSONValidator/JSONValidator';
 import WhitespaceRemover from './views/WhitespaceRemover/WhitespaceRemover';
 import './app.scss';
@@ -13,7 +13,7 @@ const App = () => {
 		<Container>
 			<BrowserRouter>
 				<div className='vh-100'>
-					<div className='mt-2 menu-container'>
+					<div className='mt-2 menu-container d-flex justify-content-center'>
 						<Header />
 					</div>
 					<div className='main-content-container'>

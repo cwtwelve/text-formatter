@@ -62,7 +62,7 @@ const JSONValidator = () => {
 						</div>
 					</div>
 					<FormControl
-						placeholder={`{\n\t"Paste": "here"\n}`}
+						placeholder='Paste JSON object here'
 						className='h-100'
 						as='textarea'
 						onChange={(e) => setText(e.target.value)}

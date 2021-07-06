@@ -63,6 +63,7 @@ const WhitespaceRemover = () => {
 					</div>
 					<div className='d-flex flex-row h-100'>
 						<FormControl
+							placeholder='Paste text here'
 							className='mr-1'
 							as='textarea'
 							onChange={(e) => setText(e.target.value)}
