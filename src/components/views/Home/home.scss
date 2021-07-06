@@ -7,18 +7,33 @@
 .logo-circle {
 	background-color: $cyan-color;
 	color: $dark-gray-color;
-	font-size: calc(min(22vw, 22vh));
 	border-radius: 50%;
 	width: calc(min(60vw, 60vh));
 	height: calc(min(60vw, 60vh));
 	text-align: center;
 
-	-webkit-animation: rotating 10s ease-in-out infinite;
-	-moz-animation: rotating 10s ease-in-out infinite;
-	-ms-animation: rotating 10s ease-in-out infinite;
-	-o-animation: rotating 10s ease-in-out infinite;
-	animation: rotating 10s ease-in-out infinite;
+	// -webkit-animation: rotating 10s ease-in-out infinite;
+	// -moz-animation: rotating 10s ease-in-out infinite;
+	// -ms-animation: rotating 10s ease-in-out infinite;
+	// -o-animation: rotating 10s ease-in-out infinite;
+	// animation: rotating 10s ease-in-out infinite;
 }
+
+.word {
+	font-size: calc(min(8vw, 8vh));
+}
+
+// .quick-word {
+// 	font-size: calc(min(10vw, 10vh));
+// }
+
+// .text-word {
+// 	font-size: calc(min(10vw, 10vh));
+// }
+
+// .formatter-word {
+// 	font-size: calc(min(10vw, 10vh));
+// }
 
 @-webkit-keyframes rotating {
 	0% {

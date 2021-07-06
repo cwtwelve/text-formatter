@@ -1,4 +1,3 @@
-import React from 'react';
 import { InfoMessageType } from '../../../models';
 import './infoMessage.scss';
 
@@ -13,21 +12,22 @@ const UIMessage = ({
 	infoMessageType = InfoMessageType.INFO,
 	clickHandler,
 }: UIMessageProps) => {
+	const getMessageType = () => {
+		return infoMessageType === InfoMessageType.INFO
+			? 'info-message-container'
+			: infoMessageType === InfoMessageType.SUCCESS
+			? 'success-message-container'
+			: 'failure-message-container';
+	};
+
 	if (!text) {
 		return null;
 	}
 
 	return (
 		<div
-			key={Date.now()}
 			onClick={clickHandler}
-			className={`message-container ${
-				infoMessageType === InfoMessageType.INFO
-					? 'info-message-container'
-					: infoMessageType === InfoMessageType.SUCCESS
-					? 'success-message-container'
-					: 'failure-message-container'
-			}`}
+			className={`message-container ${getMessageType()}`}
 		>
 			<span>{text}</span>
 		</div>

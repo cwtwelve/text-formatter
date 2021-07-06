@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
-import Header from './Header';
+import Header from './ui/Header/Header';
 import Home from './views/Home/Home';
 import JSONValidator from './views/JSONValidator/JSONValidator';
 import WhitespaceRemover from './views/WhitespaceRemover/WhitespaceRemover';

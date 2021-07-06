@@ -1,10 +1,10 @@
-import React from 'react';
+import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 const Header = () => {
 	return (
-		<React.Fragment>
+		<Fragment>
 			<Link className='mr-2' to='/'>
 				<Button variant='outline-info' type='button'>
 					Home
@@ -15,12 +15,12 @@ const Header = () => {
 					JSON Validator
 				</Button>
 			</Link>
-            <Link className='mr-2' to='/WhitespaceRemover'>
+			<Link className='mr-2' to='/WhitespaceRemover'>
 				<Button variant='outline-light' type='button'>
-                    Whitespace Remover
+					Whitespace Remover
 				</Button>
 			</Link>
-		</React.Fragment>
+		</Fragment>
 	);
 };
 
