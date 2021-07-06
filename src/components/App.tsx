@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import Header from './ui/Header/Header';
 import Home from './views/Home/Home';
 import JSONValidator from './views/JSONValidator/JSONValidator';
+import JSONFormatter from './views/JSONFormatter/JSONFormatter';
 import WhitespaceRemover from './views/WhitespaceRemover/WhitespaceRemover';
 import './app.scss';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -24,6 +25,11 @@ const App = () => {
 									path='/JSONValidator'
 									exact
 									component={JSONValidator}
+								/>
+								<Route
+									path='/JSONFormatter'
+									exact
+									component={JSONFormatter}
 								/>
 								<Route
 									path='/WhitespaceRemover'
